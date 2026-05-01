@@ -1,0 +1,112 @@
+import React from "react";
+import Header from "../Component/Header";
+import Footer from "../Component/Footer";
+import Link from "next/link";
+
+const styles = {
+  WorksContainer:
+    "w-[1083px] flex flex-col gap-[50px] my-[90px] max-mb:w-full max-mb:px-[33px] max-xs:p-0",
+  WorksContainerDiv:
+    "flex flex-row flex-wrap gap-[16px] max-mb:flex-col max-md:items-center max-xs:px-[14px] max-xs:items-center",
+  WorksContainerDivChild:
+    "w-[533px] h-[458px] p-[22px] bg-[var(--bg-box)] rounded-[22px] shadow-custom flex flex-col gap-[12px] max-md:w-[344px] max-md:h-[397px]",
+  WorksContainerTextDiv: "flex justify-between h-[60px] text-start",
+  WorksContainerTextP:
+    "text-[#FEFFFF] text-[24px] font-[600] max-sb:text-[20px] max-xs:text-[4.6vw]",
+  WorksContainerTextSecondP:
+    "text-[#525252] text-[16px] font-[500] text-start max-xs:text-[3.7vw] short-text",
+  WorksContainerDivArrow:
+    "w-[32px] h-[32px] bg-no-repeat arrow my-[10px] cursor-pointer overflow-visible",
+  WorksContainerDivImage:
+    "w-[487px] h-[353px] bg-no-repeat rounded-[14px] max-mb:w-full max-mb:bg-center",
+};
+
+const Works = () => {
+  const arr = [
+    {
+      id: "Futurest",
+      project_name: "Futurest",
+      project_title: "Event/Tickets App",
+      project_image: "/Assets/project-image/Futurest.png",
+      project_arrow: "/Assets/project-image/arrow.svg",
+    },
+    {
+      id: "SkyPtoP",
+      project_name: "SkyPtoP",
+      project_title: "First Metaverse in Armenia",
+      project_image: "/Assets/project-image/iPhone14Problackmini.png",
+      project_arrow: "/Assets/project-image/arrow.svg",
+    },
+    {
+      id: "SoloByTaqsim",
+      project_name: "Solo By Taqsim",
+      project_title: "Cargo transportation from Europe to Armenia",
+      project_image: "/Assets/project-image/Solo.png",
+      project_arrow: "/Assets/project-image/arrow.svg",
+    },
+    {
+      id: "UpComming",
+      project_name: "Up Comming",
+      project_title: "Virtual instrument",
+      project_image: "/Assets/project-image/upcomming.png",
+      project_arrow: "/Assets/project-image/arrow.svg",
+    },
+    {
+      id: "UpComming",
+      project_name: "Up Comming",
+      project_title: "Up Comming",
+      project_image: "/Assets/project-image/upcomming.png",
+      project_arrow: "/Assets/project-image/arrow.svg",
+    },
+    {
+      id: "UpComming",
+      project_name: "Up Comming",
+      project_title: "Up Comming",
+      project_image: "/Assets/project-image/upcomming.png",
+      project_arrow: "/Assets/project-image/arrow.svg",
+    },
+  ];
+
+  return (
+    <>
+      <Header />
+      <div className={styles.WorksContainer}>
+        <div className={styles.WorksContainerDiv}>
+          {arr.map((item, index) => (
+            <div key={index} className="max-xs:w-full flex justify-center">
+              <div className={styles.WorksContainerDivChild}>
+                <div className={styles.WorksContainerTextDiv}>
+                  <div className="short-text">
+                    <div>
+                      <p className={styles.WorksContainerTextP}>
+                        {item.project_name}
+                      </p>
+                    </div>
+                    <div>
+                      <p className={styles.WorksContainerTextSecondP}>
+                        {item.project_title}
+                      </p>
+                    </div>
+                  </div>
+                  <Link href={`/project/${item.id}`}>
+                    <div
+                      className={styles.WorksContainerDivArrow}
+                      style={{ backgroundImage: `url(${item.project_arrow})` }}
+                    ></div>
+                  </Link>
+                </div>
+                <div
+                  className={styles.WorksContainerDivImage}
+                  style={{ backgroundImage: `url(${item.project_image})` }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default Works;
