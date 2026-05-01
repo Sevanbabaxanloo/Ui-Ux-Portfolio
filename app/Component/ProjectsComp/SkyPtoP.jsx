@@ -147,8 +147,8 @@ const SkyPtoP = () => {
     <div className="project-detail relative ">
       <Header />
       <div>
-        <div className="relative w-full flex flex-col items-center">
-          <div className="relative w-full text-center z-10 pt-14 px-6 pb-0 mb-[-16%] max-md:mb-0 max-sm:pt-9 px-4">
+        <div className="mt-[7.227vw] relative w-full flex flex-col items-center max-xxl:mt-[30px]">
+          <div className="relative w-full text-center z-10 pt-14 px-6 pb-0 mb-[-16%] max-md:mb-0 px-4 max-lg:pt-0 max-md:mt-[30px]">
             <div className="pb-8 max-md:mx-auto max-md:rounded-tl-[14px] max-md:rounded-tr-[14px] max-md:border-b-0 max-md:w-[88%] max-sm:p-[22px] max-sm:w-[92%] max-sm:max-w-[92%]">
               <div className="flex flex-col gap-[12px]">
                 <p className="text-[#525252] font-montserrat font-[500] text-[15px] leading-[18px] text-center max-xs:text-[15px]">
